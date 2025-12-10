@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apple-style Landing Page (Learning Demo)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.06);
+      --muted: #9aa7b2;
+      --accent: linear-gradient(90deg,#6ee7b7,#60a5fa);
+      --glass-border: rgba(255,255,255,0.08);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.06), transparent),
+                  radial-gradient(600px 400px at 90% 90%, rgba(110,231,183,0.03), transparent),
+                  var(--bg);
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.35;
+      padding:24px;
+    }
+
+    /* Header */
+    .header{
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      max-width:1200px;margin:0 auto;padding:10px 0 32px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:36px;height:36px;display:inline-grid;place-items:center;background:linear-gradient(180deg,#fff,#e6eef6);color:#0b1220;border-radius:9px;padding:6px}
+    .logo svg{width:18px;height:18px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;padding:8px;border-radius:8px}
+    nav a:hover{color:white;background:rgba(255,255,255,0.03)}
+
+    .cta{background:linear-gradient(90deg,#1f7fff,#6ee7b7);color:#041022;padding:8px 14px;border-radius:999px;font-weight:700}
+
+    /* Hero */
+    .hero{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:32px;align-items:center}
+    .hero-content h1{font-size:42px;margin:0 0 12px;letter-spacing:-0.5px}
+    .hero-content p{color:var(--muted);margin:0 0 20px;font-size:16px}
+    .hero-actions{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-border);cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:#041022;border:none;padding:12px 18px}
+
+    /* Device card */
+    .device{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:24px;padding:24px;backdrop-filter:blur(6px);
+    }
+    .device-media{height:380px;display:flex;align-items:center;justify-content:center}
+    .device-screen{
+      width:320px;height:260px;border-radius:28px;box-shadow:0 20px 40px rgba(2,6,23,0.6);
+      background:linear-gradient(180deg,#041024,#08203a);
+      display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden
+    }
+    .device-screen .shine{position:absolute;inset:0;background:linear-gradient(120deg, rgba(255,255,255,0.02), rgba(255,255,255,0));pointer-events:none}
+    .device-phones{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .mini-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:12px}
+
+    /* Features */
+    .features{max-width:1200px;margin:36px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--card);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .feature h3{margin:0 0 8px}
+    .feature p{color:var(--muted);margin:0}
+
+    /* Footer */
+    .footer{max-width:1200px;margin:48px auto 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:20px}
+      .device{order: -1}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      body{padding:16px}
+      nav{display:none}
+      .header{padding-bottom:18px}
+      .brand .name{display:none}
+      .features{grid-template-columns:1fr}
+      .hero-content h1{font-size:30px}
+    }
+
+    /* little utilities */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden>
+        <!-- simple apple-like glyph (not exact copy) -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3C13.1 3 14 3.9 14 5C14 6.1 13.1 7 12 7C10.9 7 10 6.1 10 5C10 3.9 10.9 3 12 3Z" fill="#0b1220"/>
+          <path d="M7 9C4 12 7 18 12 18C17 18 20 12 17 9C16 8 14 8 12 9C10 8 8 8 7 9Z" fill="#0b1220"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:700">Aple</div>
+        <div class="muted" style="font-size:12px">Design demo</div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#">Mac</a>
+      <a href="#">iPad</a>
+      <a href="#">iPhone</a>
+      <a href="#">Watch</a>
+      <a href="#">Support</a>
+    </nav>
+
+    <div style="display:flex;gap:12px;align-items:center">
+      <button class="btn">Store</button>
+      <button class="cta">Buy</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Meet the new iPhone — delightful design, powerful chip</h1>
+        <p>Experience a seamless blend of performance and elegance. This demo recreates an Apple-style landing layout for learning and inspiration.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary">Pre-order</button>
+          <button class="btn">Learn more</button>
+        </div>
+
+        <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(180deg,#fff,#e6eef6);display:grid;place-items:center;color:#041022;font-weight:700">128</div>
+            <div>
+              <div style="font-weight:700">From NPR 128 GB</div>
+              <div class="muted" style="font-size:13px">Available December 20</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="device">
+        <div class="device-media">
+          <div class="device-screen" role="img" aria-label="iPhone mock">
+            <div style="text-align:center">
+              <h2 style="margin:0 0 8px">iPhone Demo</h2>
+              <p class="muted" style="margin:0 0 14px">Stunning display • Super Retina • Ceramic Shield</p>
+              <div style="display:flex;gap:8px;justify-content:center">
+                <div class="mini-card">Midnight</div>
+                <div class="mini-card">Starlight</div>
+              </div>
+            </div>
+            <div class="shine"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px">
+          <div>
+            <div style="font-weight:700">Shop iPhone</div>
+            <div class="muted" style="font-size:13px">Trade-in available</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn">Compare</button>
+            <button class="btn btn-primary">Buy</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Powerful chip</h3>
+        <p>Industry-leading performance for apps, games and photography — all while preserving battery life.</p>
+      </div>
+      <div class="feature">
+        <h3>Pro camera system</h3>
+        <p>Capture pro-level photos and videos with computational photography and enhanced low-light performance.</p>
+      </div>
+      <div class="feature">
+        <h3>Privacy & Security</h3>
+        <p>Built-in privacy protections keep your data under your control, with secure hardware and software.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2025 Apple. This is a demo for learning — not affiliated with Apple Inc.</div>
+      <div class="muted">Terms · Privacy · Site Map</div>
+    </footer>
+  </main>
+
+</body>
+</html>
