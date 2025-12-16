@@ -1,0 +1,15 @@
+
+    *{
+        margin: 0;
+    
+    }
+
+        .text{
+            color: lime;
+            background-color: purple;
+        }
+        .text2{
+            color: lime;
+            background-color: black;
+        }
+        
