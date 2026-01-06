@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positions Playground</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* FIXED Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    z-index: 100;
+  }
+
+  /* Scrollable main content */
+  .main {
+    margin-top: 70px;
+    padding: 10px;
+  }
+
+  /* STATIC Box */
+  .static-box {
+    background-color: #87CEFA;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* RELATIVE Box */
+  .relative-box {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    background-color: #90EE90;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* ABSOLUTE inside container */
+  .absolute-container {
+    position: relative;
+    height: 250px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px dashed #aaa;
+    padding: 10px;
+  }
+
+  .absolute-box {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 150px;
+    height: 100px;
+    background-color: #FFA500;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .absolute-box2 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 80px;
+    background-color: #FF4500;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* STICKY Header */
+  .sticky-header {
+    position: sticky;
+    top: 70px; /* under fixed navbar */
+    background-color: #800080;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    z-index: 50;
+  }
+
+  /* BUTTON with absolute inside relative container */
+  .button-container {
+    position: relative;
+    height: 150px;
+    background-color: #f5f5f5;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .absolute-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Overlapping boxes to show z-index */
+  .zindex-container {
+    position: relative;
+    height: 200px;
+    margin: 10px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .z-box1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #00CED1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .z-box2 {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    background-color: #FF6347;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="navbar">Fixed Navbar</div>
+
+<div class="main">
+  <div class="static-box">Static Box</div>
+  <div class="relative-box">Relative Box</div>
+
+  <div class="absolute-container">
+    Absolute Container
+    <div class="absolute-box">Absolute Box 1</div>
+    <div class="absolute-box2">Absolute Box 2</div>
+  </div>
+
+  <div class="sticky-header">Sticky Header (sticks under navbar)</div>
+
+  <div class="button-container">
+    Button Container (Relative)
+    <button class="absolute-button">Absolute Button</button>
+  </div>
+
+  <div class="zindex-container">
+    Z-Index Demo
+    <div class="z-box1">Box 1</div>
+    <div class="z-box2">Box 2 (on top)</div>
+  </div>
+
+  <div style="height: 600px; background: linear-gradient(white, lightgray); margin:10px; padding:10px;">
+    Scrollable Content<br><br>
+    Scroll to see sticky and fixed effects. The overlapping boxes show how z-index works.
+  </div>
+</div>
+
+</body>
+</html>
+

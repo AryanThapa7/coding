@@ -1,15 +1,5 @@
-
-    *{
-        margin: 0;
+.text{
+    text-shadow:10px red; 
+    border: 1px  solid black;
     
-    }
-
-        .text{
-            color: lime;
-            background-color: purple;
-        }
-        .text2{
-            color: lime;
-            background-color: black;
-        }
-        
+}
