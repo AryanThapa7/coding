@@ -1,0 +1,52 @@
+body {
+    margin: 0;  
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url("DWITCollege.png"); 
+    background-size: cover;       
+    background-position: center; 
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 200vh;
+}
+   
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #01060a;
+    padding: 10px 30px;
+    box-shadow: red;
+    box-sizing: 20px;
+}
+
+.logo {
+    width: 120px;   
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 250px;
+}
+
+.nav-links li a {
+    text-decoration: dashed;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nav-links li a:hover {
+    color: #000000;
+}
+
+.logo img {
+    height: auto;
+    width: auto;
+}
+
+
