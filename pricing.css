@@ -1,0 +1,120 @@
+*{
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing : border-box ;
+    font-family : Arial , sans-serif ;
+}
+
+body{
+    background : #f5f7fb ;
+}
+
+.navbar{
+    background : white ;
+    padding : 15px 40px ;
+    display : flex ;
+    justify-content : space-between ;
+    align-items : center ;
+    box-shadow : 0 4px 10px rgba(0,0,0,0.1) ;
+}
+
+.logo{
+    color : #2b59ff ;
+}
+
+.nav-links{
+    list-style : none ;
+    display : flex ;
+    gap : 25px ;
+}
+
+.nav-links li{
+    cursor : pointer ;
+    font-weight : bold ;
+    color : #444 ;
+}
+
+.main{
+    text-align : center ;
+    padding : 50px 20px ;
+}
+
+.title{
+    font-size : 32px ;
+    margin-bottom : 10px ;
+}
+
+.subtitle{
+    color : #666 ;
+    margin-bottom : 40px ;
+}
+
+.card-container{
+    display : flex ;
+    justify-content : center ;
+    gap : 30px ;
+    flex-wrap : wrap ;
+}
+
+.card{
+    background : white ;
+    width : 300px ;
+    padding : 30px ;
+    border-radius : 15px ;
+    box-shadow : 0 8px 25px rgba(0,0,0,0.1) ;
+    text-align : left ;
+    transition : transform 0.3s ;
+}
+
+.card:hover{
+    transform : translateY(-8px) ;
+}
+
+.card h3{
+    font-size : 22px ;
+    margin-bottom : 15px ;
+}
+
+.start{
+    color : #777 ;
+    font-size : 14px ;
+}
+
+.price{
+    font-size : 40px ;
+    color : #2b59ff ;
+    margin : 10px 0 ;
+}
+
+.price span{
+    font-size : 16px ;
+    color : #555 ;
+}
+
+.desc{
+    margin : 15px 0 ;
+    color : #555 ;
+}
+
+.card ul{
+    list-style : none ;
+    margin : 20px 0 ;
+}
+
+.card ul li{
+    margin-bottom : 10px ;
+    color : #333 ;
+}
+
+.card button{
+    border : none ;
+    background : #2b59ff ;
+    color : white ;
+    padding : 10px 15px ;
+    border-radius : 8px ;
+    cursor : pointer ;
+}
+
+.card button:hover{
+    background : #1f45d8 ;
+}
