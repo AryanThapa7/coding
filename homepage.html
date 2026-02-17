@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopSphere</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<nav>
+    <h2 onclick="goHome()">ShopSphere</h2>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchProducts()">
+    <div onclick="goCheckout()">Cart (<span id="cartCount">0</span>)</div>
+</nav>
+
+<div class="filters">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Electronics')">Electronics</button>
+    <button onclick="filterCategory('Fashion')">Fashion</button>
+</div>
+
+<div class="products" id="productContainer"></div>
+
+<script src="test.js"></script>
+</body>
+</html>
