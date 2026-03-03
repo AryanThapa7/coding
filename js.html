@@ -1,16 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>Random Number Generator</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
 </head>
+
 <body>
-    
 
+<div class="container">
+    <h2>🎲 Random Generator</h2>
 
+    <button onclick="generateLudo()">Roll Ludo</button>
+    <button onclick="generateOTP()">Generate OTP</button>
+    <button onclick="generateRandom()">Random 50-100</button>
 
-    <script src="01.js"></script>   
+    <div class="output" id="result"></div>
+</div>
+
+<script class="01.js">
+
+    function generateLudo() {
+        const MIN = 1;
+        const MAX = 6;
+        let randomNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+        document.getElementById("result").innerText = "Ludo Number: " + randomNumber;
+    }
+
+    function generateOTP() {
+        const Min = 100000;
+        const Max = 999999;
+        let otp = Math.floor(Math.random() * (Max - Min + 1)) + Min;
+        document.getElementById("result").innerText = "OTP: " + otp;
+    }
+
+    function generateRandom() {
+        let min = 50;
+        let max = 100;
+        let random = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.getElementById("result").innerText = "Random (50-100): " + random;
+    }
+
+</script>
+
 </body>
 </html>
