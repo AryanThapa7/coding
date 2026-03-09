@@ -2,63 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Random Generator - Tailwind</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
-        <h2 class="text-2xl font-bold mb-6 text-gray-800">
-            🎲 Random Generator
-        </h2>
-
-        <div class="space-y-3">
-            <button onclick="generateLudo()" 
-                class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition">
-                Roll Ludo (1–6)
-            </button>
-
-            <button onclick="generateOTP()" 
-                class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition">
-                Generate OTP
-            </button>
-
-            <button onclick="generateRandom()" 
-                class="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-lg transition">
-                Random (50–100)
-            </button>
-        </div>
-
-        <div id="result" 
-            class="mt-6 text-xl font-semibold text-gray-700">
-        </div>
-    </div>
-
-<script>
-
-    function generateLudo() {
-        const MIN = 1;
-        const MAX = 6;
-        let randomNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-        document.getElementById("result").innerText = "🎲 Ludo Number: " + randomNumber;
-    }
-
-    function generateOTP() {
-        const Min = 100000;
-        const Max = 999999;
-        let otp = Math.floor(Math.random() * (Max - Min + 1)) + Min;
-        document.getElementById("result").innerText = "🔐 OTP: " + otp;
-    }
-
-    function generateRandom() {
-        let min = 50;
-        let max = 100;
-        let random = Math.floor(Math.random() * (max - min + 1)) + min;
-        document.getElementById("result").innerText = "🎯 Random (50-100): " + random;
-    }
-
-</script>
-
+<body>
+    
 </body>
+<script src="01.js"> </script>
 </html>
