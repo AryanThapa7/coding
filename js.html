@@ -1,82 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Random Number Generator</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            width: 350px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .output {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Random Generator - Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-<div class="container">
-    <h2>🎲 Random Generator</h2>
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            🎲 Random Generator
+        </h2>
 
-    <button onclick="generateLudo()">Roll Ludo</button>
-    <button onclick="generateOTP()">Generate OTP</button>
-    <button onclick="generateRandom()">Random 50-100</button>
+        <div class="space-y-3">
+            <button onclick="generateLudo()" 
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition">
+                Roll Ludo (1–6)
+            </button>
 
-    <div class="output" id="result"></div>
-</div>
+            <button onclick="generateOTP()" 
+                class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition">
+                Generate OTP
+            </button>
 
-<script class="01.js">
+            <button onclick="generateRandom()" 
+                class="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-lg transition">
+                Random (50–100)
+            </button>
+        </div>
+
+        <div id="result" 
+            class="mt-6 text-xl font-semibold text-gray-700">
+        </div>
+    </div>
+
+<script>
 
     function generateLudo() {
         const MIN = 1;
         const MAX = 6;
         let randomNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-        document.getElementById("result").innerText = "Ludo Number: " + randomNumber;
+        document.getElementById("result").innerText = "🎲 Ludo Number: " + randomNumber;
     }
 
     function generateOTP() {
         const Min = 100000;
         const Max = 999999;
         let otp = Math.floor(Math.random() * (Max - Min + 1)) + Min;
-        document.getElementById("result").innerText = "OTP: " + otp;
+        document.getElementById("result").innerText = "🔐 OTP: " + otp;
     }
 
     function generateRandom() {
         let min = 50;
         let max = 100;
         let random = Math.floor(Math.random() * (max - min + 1)) + min;
-        document.getElementById("result").innerText = "Random (50-100): " + random;
+        document.getElementById("result").innerText = "🎯 Random (50-100): " + random;
     }
 
 </script>

@@ -29,3 +29,11 @@ const Max = 999999 ;
 
 let otp = Math.floor(Math.random() * (Max - Min + 1)) + Min; // random number between 100000 and 999999
 console.log(otp);
+
+console.log(5 ** 2); // 25
+
+// == loose equality operator
+// === strict equality operator
+
+console.log(5 == '5'); // true , checks only value not data type
+console.log(5 === '5'); // false , checks value and data type
