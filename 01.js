@@ -17,7 +17,7 @@ let email = "susan.shakya@deerwalk.edu.np";
 let username = email.slice(0, email.indexOf("."));
 
 console.log(username);
-*/
+
 let username = "John Doe";
 let email = "john.doe@example.com";
 // console.log(email.split(".")[0]); // it will split the email string into an array of three elements and return the first element which is the username part of the email address
@@ -26,3 +26,16 @@ let fname = " John ";
 let lname = " Doe ";
 console.log("My first name is " + fname + " and my last name is " + lname); // it will remove the leading and trailing whitespace from the string
 console.log(`My first name is ${fname} and my last name is ${lname}`); // it will remove the leading and trailing whitespace from the string
+
+// TYPE CASTING : 
+// implicit type casting : when the javascript engine automatically converts one data type to another data type
+// explicit type casting : when the programmer manually converts one data type to another data type
+
+let num1 = 12;
+let num2 = "20";
+console.log(num1 + num2); // it will concatenate the two values and return "1020" because the + operator is used for both addition and concatenation and when one of the operands is a string, it will convert the other operand to a string and concatenate them
+*/
+
+let num1 = 1;
+let num2 = "2";
+console.log(num1 + Number(num2)); // it will convert the string "2" to a number and return 3
