@@ -34,8 +34,14 @@ console.log(`My first name is ${fname} and my last name is ${lname}`); // it wil
 let num1 = 12;
 let num2 = "20";
 console.log(num1 + num2); // it will concatenate the two values and return "1020" because the + operator is used for both addition and concatenation and when one of the operands is a string, it will convert the other operand to a string and concatenate them
-*/
+
 
 let num1 = 1;
 let num2 = "2";
 console.log(num1 + Number(num2)); // it will convert the string "2" to a number and return 3
+
+*/
+
+let num1 = 1;
+let num2 = "two";
+console.log(1 + 2 + "3"); // it will first add the two numbers and return 3 and then it will concatenate the string "3" to the result and return "33"
