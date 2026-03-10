@@ -19,7 +19,7 @@ let user = {
 console.log(user.name);
 console.log(user.age);
 console.log(user.city);
-*/
+
 
 // for switch case in js
 
@@ -35,3 +35,26 @@ if (age < 18) {
 
 
 age >= 18 ? console.log("You are an adult") : console.log("You are a minor");
+*/
+
+// for loop in js
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// while loop in js
+
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+// do while loop in js
+
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);    
