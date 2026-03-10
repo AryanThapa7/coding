@@ -35,7 +35,7 @@ if (age < 18) {
 
 
 age >= 18 ? console.log("You are an adult") : console.log("You are a minor");
-*/
+
 
 // for loop in js
 
@@ -57,4 +57,19 @@ let j = 0;
 do {
     console.log(j);
     j++;
-} while (j < 5);    
+} while (j < 5);   
+*/ 
+
+// functions in js
+
+function add( num1 , num2 ) {
+   //  console.log(num1 + num2); 
+    return num1 + num2; // the difference is that return will give you the result and you can use it later in your code, while console.log will just print the result to the console and you cannot use it later in your code.
+
+}
+let result = add(5, 10);
+console.log(result);
+
+let add;
+ let result = add(5, 10);
+console.log(result); // this will give you an error because add is not defined yet.
