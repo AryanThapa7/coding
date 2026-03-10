@@ -58,7 +58,7 @@ do {
     console.log(j);
     j++;
 } while (j < 5);   
-*/ 
+
 
 // functions in js
 
@@ -73,3 +73,12 @@ console.log(result);
 let add;
  let result = add(5, 10);
 console.log(result); // this will give you an error because add is not defined yet.
+
+
+
+const add = (num1, num2) =>{ 
+    return num1 + num2;
+}; // this is an arrow function, it is a shorter syntax for writing functions in js. It is also called a lambda function in other programming languages.
+let result = add(5, 10);
+console.log(result);
+*/
