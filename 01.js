@@ -10,7 +10,7 @@
 
 // objects and arrays in js
 
-let a = [ "Ram ", 12 , "ktm"];
+/* let a = [ "Ram ", 12 , "ktm"];
 let user = {
     name: "Ram",
     age: 12,
@@ -19,6 +19,7 @@ let user = {
 console.log(user.name);
 console.log(user.age);
 console.log(user.city);
+*/
 
 // for switch case in js
 
@@ -31,3 +32,6 @@ if (age < 18) {
 } else {
     console.log("You are a senior citizen");
 }
+
+
+age >= 18 ? console.log("You are an adult") : console.log("You are a minor");
