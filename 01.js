@@ -1,7 +1,8 @@
-let inValid = true;
-let isNum = false ;
+// arrays in js 
 
-let num = ""; 
-num = Boolean(num);
-console.log(num);
+let numbers = [1, 2, 3, 4, " five " , true ];
+// numbers.pop();
+// numbers.shift();
+// numbers.unshift(-1);
 
+console.log(numbers);
