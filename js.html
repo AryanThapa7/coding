@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hover Image Change</title>
 </head>
 <body>
-    <p id="text">This is a paragraph</p>
 
-<a id="link">Go to website</a>
-    <script src="02.js"></script>
+<img id="myImage" 
+     src="DWITCollege.png" 
+     width="300">
+
+<script>
+const img = document.getElementById("myImage");
+
+img.addEventListener("mouseenter", () => {
+    img.src = "Unknown.jpeg";
+});
+
+img.addEventListener("mouseleave", () => {
+    img.src = "DWITCollege.png";
+});
+</script>
+
 </body>
-
 </html>
